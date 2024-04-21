@@ -10,11 +10,11 @@ const persistConfig = {
     whitelist: ["contacts"],
 };
 
-const persistedContactReducer = persistReducer(persistConfig, contactsReducer);
+const persistedContactsReducer = persistReducer(persistConfig, contactsReducer);
 
 const store = configureStore({
     reducer: {
-        contact: persistedContactReducer,
+        contacts: persistedContactsReducer,
         filters: filtersReducer,
     },
 });
